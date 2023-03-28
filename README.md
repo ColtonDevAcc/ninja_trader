@@ -130,6 +130,8 @@ Migrating from SetState to BLoC:
 
 In conclusion, BLoC offers several advantages over the traditional SetState reactive design pattern. It helps in separating the concerns, improving testability, scalability, and reusability of our codebase. The migration to BLoC involves identifying stateful widgets, creating BLoC classes and connecting the UI to the BLoC using a provider. By adopting BLoC, we can ensure that our application is reactive, fast and scalable.
 
+citations https://www.researchgate.net/publication/355476480_Performance_Analysis_of_BLoC_and_Provider_State_Management_Library_on_Flutte
+
 ## Proposal: Using Firebase for Feature Flagging
 
 Feature flagging is a powerful technique used in software development to control the release of new features to a subset of users, and is an essential part of any Continuous Integration/Continuous Delivery (CI/CD) pipeline. It allows developers to easily turn features on or off, gradually roll out features, test new features with beta users, and more. In this proposal, I suggest using Firebase for feature flagging.
