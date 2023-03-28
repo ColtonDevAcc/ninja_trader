@@ -5,11 +5,11 @@ Usage
 # File Structure
 The file structure of the app is organized by feature, with each feature having its own module. Within each feature module, we have the following subfolders based on Atomic design principles:
 
-<br /> Atoms: Contains the smallest UI components that are often reusable across the app.
-<br /> Molecules: Contains small UI components that are composed of one or more atoms.
-<br /> Organisms: Contains larger UI components that are composed of molecules and atoms.
-<br /> 
-<br /> The file structure looks like this:
+- Atoms: Contains the smallest UI components that are often reusable across the app.
+- Molecules: Contains small UI components that are composed of one or more atoms.
+- Organisms: Contains larger UI components that are composed of molecules and atoms.
+
+<br /> The file structure looks like this example application 
 
 
 ```
@@ -68,63 +68,15 @@ The file structure of the app is organized by feature, with each feature having 
 |   |   |-- error_handler.dart
 |-- main.dart
 ```
-### `blocs`: Contains all the BLoC related files. Each BLoC has its own directory that contains the BLoC class, the events, and the states it uses.
-### `data`: Contains data-related files such as models and repositories.
-### `features`: Contains all the feature-related files. Each feature has its own directory that contains the module file, the pages, and any other related files.
-### `services`: Contains all the service files, such as API clients or database services.
-### `utils`: Contains utility files, such as constants or error handlers.
-### `Within` each feature directory, there is also a widgets directory that contains atomic widgets related to that feature. These atomic widgets
+- `blocs`: Contains all the BLoC related files. Each BLoC has its own directory that contains the BLoC class, the events, and the states it uses.
+- `data`: Contains data-related files such as models and repositories.
+-  `features`: Contains all the feature-related files. Each feature has its own directory that contains the module file, the pages, and any other related files.
+-  `services`: Contains all the service files, such as API clients or database services.
+-  `utils`: Contains utility files, such as constants or error handlers.
+-  `Within` each feature directory, there is also a widgets directory that contains atomic widgets related to that feature. These atomic widgets
 
 # TESTS 
 tests will follow the same structure as the lib folder. The tests will be located in the test folder.
-
-# Lint
-
-<br />``unawaited_futures``: Warns if a future returned by an expression is not awaited or assigned to a variable. This can lead to unexpected behavior and bugs.
-<br />
-<br />``always_declare_return_types``: Requires functions to have a return type specified explicitly. This makes code more readable and easier to understand.
-<br />
-<br />``always_require_non_null_named_parameters``: Requires named parameters that are not optional to be non-null, preventing potential null reference errors.
-<br />
-<br />```annotate_overrides```: Requires that methods overriding superclass methods be annotated with @override. This ensures that the intent to override a method is clear.
-<br /> 
-<br />``avoid_bool_literals_in_conditional_expressions``: Discourages the use of boolean literals in conditional expressions, such as if (condition == true) or if (condition == false), and encourages using the condition directly.
-<br />
-<br />``avoid_catching_errors``: Encourages catching more specific types of exceptions instead of the generic Error type. This helps catch errors more specific to the code being executed.
-<br />
-<br />```avoid_classes_with_only_static_members```: Discourages the creation of classes that only have static members. This is because classes with only static members are more appropriate as collections of functions, rather than as classes.
-<br />
-<br />```avoid_empty_else```: Discourages using empty else blocks after if statements. This can lead to confusing and hard-to-read code.
-<br />
-<br />```avoid_escaping_inner_quotes```: Encourages using double quotes instead of single quotes for string literals to avoid having to escape inner quotes.
-<br />
-<br />```avoid_field_initializers_in_const_classes```: Disallows field initializers in const classes. This is because const classes should have all of their members declared as final.
-<br />
-<br />```avoid_function_literals_in_foreach_calls```: Discourages using function literals in forEach calls, and instead encourages using named functions or methods.
-<br />
-<br />```avoid_implementing_value_types```: Discourages implementing value types, such as num or String, as they are already implemented by the language and cannot be extended or modified.
-<br />
-<br />```avoid_init_to_null```: Disallows initializing variables or fields to null. This is because it is often unnecessary and can be inferred by the type system.
-<br />
-<br />```avoid_multiple_declarations_per_line```: Discourages declaring multiple variables on the same line. This can lead to harder-to-read code and make it harder to understand which variables are being declared.
-<br />
-<br />```avoid_null_checks_in_equality_operators```: Discourages using null checks in equality operators, such as == or !=. This is because these operators already handle null values correctly.
-<br />
-<br />```avoid_positional_boolean_parameters```: Discourages using positional parameters for boolean values, and encourages using named parameters instead.
-<br />
-<br />```avoid_print```: Discourages using print() statements for debugging, and instead encourages using a logging framework.
-<br />
-<br />```avoid_private_typedef_functions```: Disallows typedefs that refer to private functions or classes. This is to ensure that typedefs are used only for public APIs.
-<br />
-<br />```avoid_redundant_argument_values```: Discourages using redundant values as arguments in function or method calls.
-<br />
-<br />```avoid_relative_lib_imports```: Discourages using relative imports for libraries in the lib directory, and instead encourages using absolute imports.
-<br />
-<br />```avoid_return_types_on_setters```: Disallows specifying return types for setters, as they always return void.
-<br />
-<br />```avoid_returning_null_for_future```: Discourages returning null for Future functions or methods, as it can lead to null reference errors.
-<br />
-<br />```avoid_returning_null_for_void```: Disallows returning null from a function
 
 # Proposal
 
@@ -308,3 +260,51 @@ By automating the build process using CircleCI, we will be able to:
 - Faster Deployment: With CircleCI’s deployment feature, we can deploy our application faster and more efficiently.
 
 In conclusion, automating our build process using CircleCI with QA testing will significantly improve our development process. By automating builds and tests, we can save time, ensure consistency, and improve the quality of our application. The benefits of this proposal outweigh the costs, and we believe it will result in a more efficient and effective development process.
+
+# Lint
+
+<br />``unawaited_futures``: Warns if a future returned by an expression is not awaited or assigned to a variable. This can lead to unexpected behavior and bugs.
+<br />
+<br />``always_declare_return_types``: Requires functions to have a return type specified explicitly. This makes code more readable and easier to understand.
+<br />
+<br />``always_require_non_null_named_parameters``: Requires named parameters that are not optional to be non-null, preventing potential null reference errors.
+<br />
+<br />```annotate_overrides```: Requires that methods overriding superclass methods be annotated with @override. This ensures that the intent to override a method is clear.
+<br />
+<br />``avoid_bool_literals_in_conditional_expressions``: Discourages the use of boolean literals in conditional expressions, such as if (condition == true) or if (condition == false), and encourages using the condition directly.
+<br />
+<br />``avoid_catching_errors``: Encourages catching more specific types of exceptions instead of the generic Error type. This helps catch errors more specific to the code being executed.
+<br />
+<br />```avoid_classes_with_only_static_members```: Discourages the creation of classes that only have static members. This is because classes with only static members are more appropriate as collections of functions, rather than as classes.
+<br />
+<br />```avoid_empty_else```: Discourages using empty else blocks after if statements. This can lead to confusing and hard-to-read code.
+<br />
+<br />```avoid_escaping_inner_quotes```: Encourages using double quotes instead of single quotes for string literals to avoid having to escape inner quotes.
+<br />
+<br />```avoid_field_initializers_in_const_classes```: Disallows field initializers in const classes. This is because const classes should have all of their members declared as final.
+<br />
+<br />```avoid_function_literals_in_foreach_calls```: Discourages using function literals in forEach calls, and instead encourages using named functions or methods.
+<br />
+<br />```avoid_implementing_value_types```: Discourages implementing value types, such as num or String, as they are already implemented by the language and cannot be extended or modified.
+<br />
+<br />```avoid_init_to_null```: Disallows initializing variables or fields to null. This is because it is often unnecessary and can be inferred by the type system.
+<br />
+<br />```avoid_multiple_declarations_per_line```: Discourages declaring multiple variables on the same line. This can lead to harder-to-read code and make it harder to understand which variables are being declared.
+<br />
+<br />```avoid_null_checks_in_equality_operators```: Discourages using null checks in equality operators, such as == or !=. This is because these operators already handle null values correctly.
+<br />
+<br />```avoid_positional_boolean_parameters```: Discourages using positional parameters for boolean values, and encourages using named parameters instead.
+<br />
+<br />```avoid_print```: Discourages using print() statements for debugging, and instead encourages using a logging framework.
+<br />
+<br />```avoid_private_typedef_functions```: Disallows typedefs that refer to private functions or classes. This is to ensure that typedefs are used only for public APIs.
+<br />
+<br />```avoid_redundant_argument_values```: Discourages using redundant values as arguments in function or method calls.
+<br />
+<br />```avoid_relative_lib_imports```: Discourages using relative imports for libraries in the lib directory, and instead encourages using absolute imports.
+<br />
+<br />```avoid_return_types_on_setters```: Disallows specifying return types for setters, as they always return void.
+<br />
+<br />```avoid_returning_null_for_future```: Discourages returning null for Future functions or methods, as it can lead to null reference errors.
+<br />
+<br />```avoid_returning_null_for_void```: Disallows returning null from a function
