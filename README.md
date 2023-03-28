@@ -232,7 +232,7 @@ Feature-driven commits can provide numerous benefits to the development process.
 
 In any software development cycle, one of the most important aspects is the build process. Building a project can take a lot of time, especially if there are multiple platforms to support. An automated build process is the best way to improve efficiency and ensure consistency in the development process. CircleCI is a continuous integration and delivery platform that can automate the build process, run tests, and deploy code to different environments.
 
-Our development team has been manually building and testing our application, which can be time-consuming and can lead to errors. In order to improve our development process and ensure consistent builds, we propose to automate our build process using CircleCI.
+Our development team has been manually building and testing our application, which can be time-consuming and can lead to errors. In order to improve our development process and ensure consistent builds, I propose to automate our build process using CircleCI.
 
 Here are the steps I will take to implement this:
 
@@ -260,6 +260,33 @@ By automating the build process using CircleCI, we will be able to:
 - Faster Deployment: With CircleCI’s deployment feature, we can deploy our application faster and more efficiently.
 
 In conclusion, automating our build process using CircleCI with QA testing will significantly improve our development process. By automating builds and tests, we can save time, ensure consistency, and improve the quality of our application. The benefits of this proposal outweigh the costs, and we believe it will result in a more efficient and effective development process.
+
+## Proposal: Segregating Multiple Apps in the Same Repository and Reducing Overhead
+
+As a team of 3 developers, I have encountered challenges with maintaining multiple applications in the same repository. The problem arises when we need to make changes to one application, but it affects the other applications as well. This not only creates confusion but also increases the overhead for maintaining the applications.
+
+To solve this problem, I propose segregating the multiple applications into their own respective repositories. This will not only reduce confusion but also provide a more organized structure for development. However, segregating the applications can also create additional overhead in terms of managing multiple repositories.
+
+To mitigate this, I propose automating the build process using CircleCI. With CircleCI, we can set up automated builds and tests for each application separately. This will reduce the manual effort required for testing and ensure that each application is independently tested and deployed.
+
+Implementation:
+
+- Repository Segregation:
+We will start by segregating each application into their own respective repositories. This will involve creating new repositories for each application and moving the application-specific code and configurations to the respective repository.
+
+- CircleCI Setup:
+Once the repositories are created, we will set up CircleCI for each application. This will involve creating a CircleCI configuration file for each application and configuring the build and test steps. We will also configure CircleCI to automatically deploy the application after it has passed all the tests.
+
+- Automated Testing:
+With CircleCI in place, we can automate the testing process for each application. This will involve setting up unit tests, integration tests, and end-to-end tests for each application. The tests will be run automatically after every code change, ensuring that any bugs or issues are caught early in the development process.
+
+- QA Integration:
+We will integrate our QA team into the automated build process by configuring CircleCI to notify them when a build has passed all tests and is ready for QA testing. The QA team can then test the application and report any issues or bugs back to the development team.
+
+- Deployment:
+Finally, we will configure CircleCI to automatically deploy the application to the respective environments (e.g. staging, production) after it has passed all tests and QA has signed off on the build. This will ensure that the deployment process is automated and that each application is deployed to the correct environment.
+
+Segregating multiple applications from the same repository and automating the build process using CircleCI will not only reduce confusion but also reduce the overhead for maintaining the applications. By automating the build process, we can catch bugs early in the development process and ensure that each application is independently tested and deployed. This will ultimately lead to a more organized and efficient development process.
 
 # Lint
 
